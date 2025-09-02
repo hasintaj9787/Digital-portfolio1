@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Portfolio </title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Hasintaj H — Student Portfolio</title>
+
+  <meta name="description" content="Student portfolio for Hasintaj H — projects, skills and contact." />  <style>
+
+    :root{
+
+      --accent: #4f46e5; /* default indigo */
+
+      --bg: #0f172a;
+
+      --card: #0b1220;
+
+      --text: #e6eef8;
+
+      --muted: #98a0b3;
+
+      --glass: rgba(255,255,255,0.03);
+
+      --radius: 14px;
+
+      --max-width: 1100px;
+
+    }
+
+    *{box-sizing:border-box}
+
+    html,body{height:100%}
+
+    body{
+
+      margin:0;
+
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+
+      background: linear-gradient(180deg,var(--bg), #071029 160%);
+
+      color:var(--text);
+
+      -webkit-font-smoothing:antialiased;
+
+      -moz-osx-font-smoothing:grayscale;
+
+      line-height:1.5;
+
+      padding:40px 16px;
+
+      display:flex;
+
+      justify-content:center;
+
+    }
+
+    .wrap{
+
+      width:100%;
+
+      max-width:var(--max-width);
+
+    }
+
+    header{
+
+      display:flex;
+
+      gap:16px;
+
+      align-items:center;
+
+      margin-bottom:28px;\    }
+
+    .avatar{
+
+      width:84px;height:84px;border-radius:18px;background:linear-gradient(135deg,var(--accent),#06b6d4);flex:0 0 84px;display:grid;place-items:center;font-weight:700;font-size:28px;color:white;box-shadow:0 6px 20px rgba(0,0,0,0.5);
+
+    }
+
+    h1{margin:0;font-size:28px}
+
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .controls{margin-left:auto;display:flex;gap:10px;align-items:center}
+
+    .card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));border-radius:var(--radius);padding:18px;box-shadow:0 6px 24px rgba(2,6,23,0.7);}
+
+    nav{display:flex;gap:10px}
+
+    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:10px}
+
+    nav a:hover{color:var(--text);background:var(--glass)}
+
+    .grid{
+
+      display:grid;
+
+      grid-template-columns: 320px 1fr;
+
+      gap:20px;
+
+    }
+
+    .sidebar .section{margin-bottom:16px}
+
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+
+    .skill{padding:8px 10px;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+
+    .project h4{margin:0 0 6px}
+
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    footer{margin-top:24px;color:var(--muted);font-size:14px}
+
+    /* color picker row */
+
+    .colors{display:flex;gap:8px;align-items:center}
+
+    .swatch{width:36px;height:36px;border-radius:8px;cursor:pointer;box-shadow:0 4px 14px rgba(2,6,23,0.6);border:2px solid rgba(255,255,255,0.03)}
+
+    .accent-btn{
+
+      padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);border:none;color:white;font-weight:600;cursor:pointer;box-shadow:0 8px 28px rgba(79,70,229,0.1);
+
+    }
+
+    /* responsive */
+
+    @media (max-width:880px){
+
+      .grid{grid-template-columns:1fr;}
+
+      .avatar{width:72px;height:72px;border-radius:12px}
+
+    }
+
+    /* small helper */
+
+    .muted{color:var(--muted)}
+
+    .spaced{margin-top:12px}
+
+    /* transition */
+
+    .project, .card, header, .avatar{transition:all 280ms cubic-bezier(.2,.9,.2,1)}
+
+    /* link styles */
+
+    a.cta{display:inline-block;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);text-decoration:none;color:var(--text)}
+
+  </style></head>
+
+<body>
+
+  <div class="wrap"><header>
+
+  <div class="avatar" id="avatar">HH</div>
+
+  <div>
+
+    <h1 id="name">Hasintaj H</h1>
+
+    <p class="lead">Student • Web developer • Designer</p>
+
+    <nav class="spaced">
+
+      <a href="#about">About</a>
+
+      <a href="#projects">Projects</a>
+
+      <a href="#skills">Skills</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+  </div>
+
+  <div class="controls">
+
+    <div class="card" style="display:flex;gap:10px;align-items:center">
+
+      <div class="colors">
+
+        <!-- preset swatches -->
+
+        <button class="swatch" data-color="#4f46e5" title="Indigo" style="background:#4f46e5"></button>
+
+        <button class="swatch" data-color="#06b6d4" title="Cyan" style="background:#06b6d4"></button>
+
+        <button class="swatch" data-color="#ef4444" title="Red" style="background:#ef4444"></button>
+
+        <button class="swatch" data-color="#f59e0b" title="Amber" style="background:#f59e0b"></button>
+
+        <input id="colorPicker" type="color" title="Pick custom accent" style="width:44px;height:36px;padding:0;border:0;background:transparent;cursor:pointer">
+
+      </div>
+
+      <button id="resetBtn" class="accent-btn" title="Reset theme">Reset</button>
+
+    </div>
+
+  </div>
+
+</header>
+
+<div class="grid">
+
+  <aside class="sidebar">
+
+    <div class="card section">
+
+      <h3>About</h3>
+
+      <p class="muted">Hi! I'm <strong id="nameInline">Hasintaj</strong>, a student learning web development. I build small projects using HTML, CSS and JavaScript. This portfolio shows some of my work.</p>
+
+    </div>
+
+    <div class="card section">
+
+      <h4>Contact</h4>
+
+      <p class="muted">Email: <a class="cta" href="mailto:your.email@example.com">your.email@example.com</a></p>
+
+      <p class="muted spaced">Phone: +91-XXXXXXXXXX</p>
+
+    </div>
+
+    <div class="card section">
+
+      <h4>Quick Info</h4>
+
+      <span class="badge">Student</span> <span class="badge">Portfolio</span>
+
+      <div class="spaced">
+
+        <strong>Location</strong>
+
+        <p class="muted">India</p>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+  <main>
+
+    <section id="projects" class="card">
+
+      <h3>Projects</h3>
+
+      <div class="projects spaced" id="projectsGrid">
+
+        <article class="project">
+
+          <h4>Student Portfolio</h4>
+
+          <p>Create a portfolio using HTML/CSS/JS with theme switching (this site).</p>
+
+        </article>
+
+        <article class="project">
+
+          <h4>Todo App</h4>
+
+          <p>A simple todo list with localStorage and filters.</p>
+
+        </article>
+
+        <article class="project">
+
+          <h4>Library System</h4>
+
+          <p>A CRUD app to manage books for a small library project.</p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section id="skills" class="card spaced">
+
+      <h3>Skills</h3>
+
+      <div class="skills">
+
+        <span class="skill">HTML</span>
+
+        <span class="skill">CSS</span>
+
+        <span class="skill">JavaScript</span>
+
+        <span class="skill">Responsive Design</span>
+
+        <span class="skill">Git</span>
+
+      </div>
+
+    </section>
+
+    <section id="contact" class="card spaced">
+
+      <h3>Contact Me</h3>
+
+      <form id="contactForm">
+
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+
+          <input type="text" id="fullName" placeholder="Your name" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)">
+
+          <input type="email" id="email" placeholder="Your email" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)">
+
+        </div>
+
+        <textarea id="message" placeholder="Message" rows="4" style="width:100%;margin-top:10px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)"></textarea>
+
+        <div style="margin-top:10px;display:flex;gap:8px">
+
+          <button type="submit" class="accent-btn">Send</button>
+
+          <button type="button" id="fillDemo" class="accent-btn" style="background:transparent;border:1px solid rgba(255,255,255,0.04)">Fill Demo</button>
+
+        </div>
+
+        <p class="muted spaced">(The form doesn't actually send email — replace with your backend or service.)</p>
+
+      </form>
+
+    </section>
+
+    <footer class="muted">Built with ❤️ • Change the accent color with the swatches or the color picker. Your choice is saved locally.</footer>
+
+  </main>
+
+</div>
+
+  </div>  <script>
+
+    // --- Theme / Color logic ---
+
+    const root = document.documentElement;
+
+    const swatches = document.querySelectorAll('.swatch');
+
+    const colorPicker = document.getElementById('colorPicker');
+
+    const resetBtn = document.getElementById('resetBtn');
+
+    // default theme values (kept here so reset works)
+
+    const defaults = {
+
+      accent:'#4f46e5',
+
+      bg:'#0f172a',
+
+      card:'#0b1220',
+
+      text:'#e6eef8',
+
+      muted:'#98a0b3'
+
+    };
+
+    function applyAccent(accent){
+
+      root.style.setProperty('--accent', accent);
+
+      // generate subtle derived colors (simple algorithm)
+
+      try{
+
+        const c = hexToRgb(accent);
+
+        const dark = `rgb(${Math.max(0,c.r-20)},${Math.max(0,c.g-20)},${Math.max(0,c.b-20)})`;
+
+        root.style.setProperty('--card', hexToRgba(darkenHex(accent, 18), 1));
+
+      }catch(e){
+
+        // fallback
+
+      }
+
+    }
+
+    // helpers
+
+    function hexToRgb(hex){
+
+      const h = hex.replace('#','');
+
+      const bigint = parseInt(h,16);
+
+      return {r:(bigint>>16)&255,g:(bigint>>8)&255,b:bigint&255};
+
+    }
+
+    function darkenHex(hex,amt){
+
+      const {r,g,b}=hexToRgb(hex);
+
+      const nr=Math.max(0,Math.floor(r*(100-amt)/100));
+
+      const ng=Math.max(0,Math.floor(g*(100-amt)/100));
+
+      const nb=Math.max(0,Math.floor(b*(100-amt)/100));
+
+      return '#'+[nr,ng,nb].map(x=>x.toString(16).padStart(2,'0')).join('');
+
+    }
+
+    function hexToRgba(hex, a=1){
+
+      const {r,g,b}=hexToRgb(hex);
+
+      return `rgb(${r},${g},${b})`;
+
+    }
+
+    // load saved theme
+
+    const saved = JSON.parse(localStorage.getItem('portfolio-theme')||'null');
+
+    if(saved && saved.accent){
+
+      colorPicker.value = saved.accent;
+
+      applyAccent(saved.accent);
+
+    } else {
+
+      colorPicker.value = defaults.accent;
+
+      applyAccent(defaults.accent);
+
+    }
+
+    // swatch clicks
+
+    swatches.forEach(s=>s.addEventListener('click',ev=>{
+
+      const c = ev.currentTarget.dataset.color;
+
+      colorPicker.value = c;
+
+      applyAccent(c);
+
+      saveTheme({accent:c});
+
+    }));
+
+    colorPicker.addEventListener('input',e=>{
+
+      const c = e.target.value;
+
+      applyAccent(c);
+
+      saveTheme({accent:c});
+
+    });
+
+    resetBtn.addEventListener('click',()=>{
+
+      applyAccent(defaults.accent);
+
+      colorPicker.value = defaults.accent;
+
+      localStorage.removeItem('portfolio-theme');
+
+      location.reload();
+
+    });
+
+    function saveTheme(obj){
+
+      const current = JSON.parse(localStorage.getItem('portfolio-theme')||'{}');
+
+      const merged = {...current,...obj};
+
+      localStorage.setItem('portfolio-theme', JSON.stringify(merged));
+
+    }
+
+    // small niceties: fill demo contact & demo name change
+
+    document.getElementById('fillDemo').addEventListener('click',()=>{
+
+      document.getElementById('fullName').value = 'Test User';
+
+      document.getElementById('email').value = 'user@example.com';
+
+      document.getElementById('message').value = 'Hello! I saw your portfolio and would like to connect.';
+
+    });
+
+    // update name quickly from localStorage (editing files or adding UI to edit can overwrite this)
+
+    const nameEl = document.getElementById('name');
+
+    const nameInline = document.getElementById('nameInline');
+
+    const avatar = document.getElementById('avatar');
+
+    // If you want to programmatically change the displayed name, set `portfolio-name` in localStorage
+
+    const savedName = localStorage.getItem('portfolio-name');
+
+    if(savedName){
+
+      nameEl.textContent = savedName;
+
+      nameInline.textContent = savedName.split(' ')[0] || savedName;
+
+      avatar.textContent = initials(savedName);
+
+    }
+
+    function initials(name){
+
+      const parts = name.split(' ');
+
+      return (parts[0]?[parts[0][0]]:[]).concat(parts[1]?[parts[1][0]]:[]).join('').toUpperCase();
+
+    }
+
+    // small form handler (demo)
+
+    document.getElementById('contactForm').addEventListener('submit',e=>{
+
+      e.preventDefault();
+
+      alert('Thanks! This is a demo form. Replace with your backend to send messages.');
+
+      e.target.reset();
+
+    });
+
+  </script></body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
